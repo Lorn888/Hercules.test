@@ -18,6 +18,12 @@ connection.once('open', () => {
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
+app.get('/', async (req, res) => {
+    const workouts = await Workout.find({})
+    console.log(workouts)
+    res.render("home")
+})
+ 
 app.listen(3200, () => {
     console.log("We are going on port 3200")
 }) 
