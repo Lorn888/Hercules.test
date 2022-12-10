@@ -58,6 +58,11 @@ app.put("/workout/:id", async (req, res) => {
     res.redirect(`/workout/${workout._id}`)
 })
 
+app.delete("/workout/:id", async (req, res) => {
+    const { id } = req.params;
+    const deleteWorkout = await Workout.findByIdAndDelete(id)
+    res.redirect("/")
+})
 
     
 app.listen(3200, () => {
