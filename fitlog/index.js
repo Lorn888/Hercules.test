@@ -45,6 +45,19 @@ app.post("/workouts/", async (req, res) => {
     res.redirect(`workout/${newWorkout._id}`)
 })
 
+app.get("/workout/:id/edit", async (req, res) => {
+    const { id } = req.params;
+    const workout = await Workout.findById(id)
+    res.render("edit", {workout})
+})
+
+
+app.put("/workout/:id", async (req, res) => {
+    const { id } = req.params;
+    const workout = await Workout.findByIdAndUpdate(id, req.body, { runValidators: true })
+    res.redirect(`/workout/${workout._id}`)
+})
+
 
     
 app.listen(3200, () => {
