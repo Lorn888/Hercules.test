@@ -1,0 +1,79 @@
+@import url("https://pro.fontawesome.com/releases/v5.10.0/css/all.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  text-indent: 10px;
+  color: #fff;
+  background: #232f3e;
+  font: 28px/1.4 "Open Sans", Arial, sans-serif;
+  font-weight: bold;
+  /* text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5); */
+}
+
+.header-logo {
+  float: left;
+  width: 4%;
+  height: 60px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.header-menu {
+  float: left;
+  width: 90%;
+}
+
+.header-menu ul {
+  width: 100%;
+  height: 60px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.header-menu li {
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.header-menu li a {
+  float: left;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: #bfbfbf;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+.circle_number {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+  background: red;
+  padding: 0.6em;
+  text-align: center;
+}
